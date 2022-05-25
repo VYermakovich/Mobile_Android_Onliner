@@ -10,7 +10,7 @@ node {
   }
 
   stage('Build') {
-           git 'https://github.com/VYermakovich/Mobile_Android_Onliner.git'
+           git 'https://github.com/VYermakovich/Mobile_Android_Onliner/tree/master/src/test/resources'
            bat "mvn clean test -DsuiteFile=testng.xml"
   }
 
