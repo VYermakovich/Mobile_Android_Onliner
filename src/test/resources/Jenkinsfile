@@ -10,8 +10,8 @@ node {
   }
 
   stage('Build') {
-           git 'https://github.com/Vikochka/PythonAPI.git'
-           bat "python -m pytest -rP test --alluredir allure-report"
+           git 'https://github.com/VYermakovich/Mobile_Android_Onliner.git'
+           bat "mvn clean test -DsuiteFile=testng.xml"
   }
 
  stage('Report') {
