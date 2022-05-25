@@ -10,8 +10,11 @@ node {
   }
 
   stage('Build') {
-           git 'https://github.com/VYermakovich/Mobile_Android_Onliner/tree/master/src/test/resources'
-           bat "mvn clean test -DsuiteFile=testng.xml"
+           git 'https://github.com/VYermakovich/Mobile_Android_Onliner.git'
+           bat "mvn clean verify sonar:sonar
+                  -Dsonar.projectKey=Mobile
+                  -Dsonar.host.url=http://localhost:9000
+                  -Dsonar.login=4b18cd83df712ec25055a7a088ad2e6ec995680c"
   }
 
  stage('Report') {
