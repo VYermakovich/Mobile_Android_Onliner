@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="TradingPlatforms.com - Prod" parallel="tests" thread-count="5">
+<suite name="TradingPlatforms.com - Prod">
     <test name="Smoke Tests mobile" thread-count="5">
-        <parameter name="manufacturer" value="Samsung"/>
-        <parameter name="diagonalFrom" value="40"/>
-        <parameter name="diagonalTo" value="50"/>
-        <parameter name="priceTo" value="3000"/>
-        <parameter name="resolution" value="1920x1080 (Full HD)"/>
         <classes>
-            <class name="onlinerMobile.test.SearchTest"/>
+            <class name="onlinerMobile.tests.SearchTest"/>
         </classes>
     </test>
 </suite>
